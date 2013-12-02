@@ -6,16 +6,17 @@ class ChangeMachine
   # each denomination required.
   # [pennies, nickels, dimes, quarters]
   def issue_coins(amount_in_cents)
+    return [1, 0, 0, 1]
   end
 end
 
 class ChangeMachineTest < Minitest::Unit::TestCase
 
-  # def test_one_penny
-  #   machine = ChangeMachine.new
-  #   coins = machine.issue_coins(1)
-  #   assert_equal [1, 0, 0, 0], coins
-  # end
+  def test_one_penny
+    machine = ChangeMachine.new
+    coins = machine.issue_coins(1)
+    assert_equal [1, 0, 0, 0], coins
+  end
 
   # def test_pennies
   #   machine = ChangeMachine.new
